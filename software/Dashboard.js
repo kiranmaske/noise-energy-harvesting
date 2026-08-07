@@ -1,7 +1,29 @@
 // =========================
 // Elements
 // =========================
+// =========================
+// Load Saved Settings
+// =========================
 
+window.addEventListener("load", () => {
+
+    // Dark Mode
+    if (localStorage.getItem("darkMode") === "true") {
+        document.body.classList.add("light-mode");
+    }
+
+    // Theme Color
+    const color = localStorage.getItem("themeColor") || "#00ffff";
+    document.documentElement.style.setProperty("--theme-color", color);
+
+    // Notification
+    if (localStorage.getItem("notification") === "true") {
+        setTimeout(() => {
+            alert("Welcome to Noise Energy Dashboard");
+        }, 500);
+    }
+
+});
 const noiseEl = document.getElementById("noise");
 const voltageEl = document.getElementById("voltage");
 const powerEl = document.getElementById("power");
@@ -583,4 +605,5 @@ speed:2
 }
 
 }
+
 );
