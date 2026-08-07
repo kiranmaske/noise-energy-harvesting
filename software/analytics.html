@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics</title>
+
+    <link rel="stylesheet" href="Dashboard.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>⚡ NES</h2>
+
+    <a href="Dashboard.html">📊 Dashboard</a>
+    <a href="analytics.html">📈 Analytics</a>
+    <a href="reports.html">📄 Reports</a>
+    <a href="history.html">🗂 History</a>
+    <a href="settings.html">⚙ Settings</a>
+
+    <button id="logoutBtn">🚪 Logout</button>
+
+</div>
+
+<div class="main-content">
+
+    <h1>📈 Noise Analytics</h1>
+
+    <div class="graph">
+
+        <h2 class="graph-title">
+            Live Noise Analysis
+        </h2>
+
+        <canvas id="analyticsChart"></canvas>
+
+    </div>
+
+</div>
+
+<script src="analytics.js"></script>
+
+</body>
+</html>
