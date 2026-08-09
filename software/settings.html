@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings</title>
+
+<link rel="stylesheet" href="Dashboard.css">
+
+<style>
+
+.setting-card{
+    background:rgba(255,255,255,.08);
+    padding:25px;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+.setting-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:18px 0;
+}
+
+.setting-row select,
+.setting-row input{
+    padding:8px 12px;
+    border-radius:8px;
+}
+
+.save-btn,
+.clear-btn{
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.save-btn{
+    background:cyan;
+}
+
+.clear-btn{
+    background:#ef4444;
+    color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>⚡ NES</h2>
+
+<a href="Dashboard.html">📊 Dashboard</a>
+<a href="analytics.html">📈 Analytics</a>
+<a href="reports.html">📄 Reports</a>
+<a href="history.html">🗂 History</a>
+<a href="settings.html">⚙ Settings</a>
+
+<button id="logoutBtn">🚪 Logout</button>
+
+</div>
+
+<div class="main-content">
+
+<h1>⚙ Dashboard Settings</h1>
+
+<div class="setting-card">
+
+<div class="setting-row">
+<label>🌙 Dark Mode</label>
+<input type="checkbox" id="darkMode">
+</div>
+
+<div class="setting-row">
+<label>🎤 Default Mode</label>
+
+<select id="mode">
+<option>Simulation</option>
+<option>Microphone</option>
+</select>
+
+</div>
+
+<div class="setting-row">
+<label>🎨 Theme Color</label>
+
+<select id="themeColor">
+<option value="cyan">Cyan</option>
+<option value="lime">Green</option>
+<option value="orange">Orange</option>
+<option value="red">Red</option>
+</select>
+
+</div>
+
+<div class="setting-row">
+<label>🔔 Notifications</label>
+
+<input type="checkbox" id="notification" checked>
+
+</div>
+
+<div class="setting-row">
+<label>🔄 Auto Refresh</label>
+
+<input type="checkbox" id="refresh" checked>
+
+</div>
+
+<br>
+
+<button class="save-btn" onclick="saveSettings()">
+💾 Save Settings
+</button>
+
+<button class="clear-btn" onclick="clearHistory()">
+🗑 Clear History
+</button>
+
+
+
+<button class="clear-btn" onclick="resetSettings()">
+♻ Reset Settings
+</button>
+
+</div>
+
+</div>
+
+<script src="setting.js"></script>
+
+</body>
+</html>
